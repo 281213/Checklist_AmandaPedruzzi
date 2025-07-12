@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>SOS Plantão</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function toggleProtocolo(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body>
+  <h2>🚨 SOS Plantão</h2>
+  <div class="protocolo">
+    <button onclick="toggleProtocolo('pcr')">❤️ PCR</button>
+    <div id="pcr" style="display:none">
+      <ul>
+        <li>Epinefrina: 1mg a cada 3-5min IV</li>
+        <li>RCP: 30:2 se 1 socorrista / 15:2 se 2</li>
+        <li>Desfibrilar se FV/TV sem pulso</li>
+      </ul>
+    </div>
+    <button onclick="toggleProtocolo('hipo')">💉 Hipoglicemia</button>
+    <div id="hipo" style="display:none">
+      <ul>
+        <li>Glicose < 60: 1 ampola de G50% EV</li>
+        <li>Glicose < 40: repetir após 15min</li>
+      </ul>
+    </div>
+    <button onclick="toggleProtocolo('hiper')">💊 Hiperglicemia</button>
+    <div id="hiper" style="display:none">
+      <ul>
+        <li>Monitorar cetonas e eletrólitos</li>
+        <li>SF 0,9% + Insulina regular EV</li>
+      </ul>
+    </div>
+    <button onclick="toggleProtocolo('convulsao')">⚡ Convulsão</button>
+    <div id="convulsao" style="display:none">
+      <ul>
+        <li>Midazolam 10mg IM ou Diazepam 10mg EV</li>
+      </ul>
+    </div>
+    <button onclick="toggleProtocolo('sepse')">🩸 Sepse</button>
+    <div id="sepse" style="display:none">
+      <ul>
+        <li>SF 0,9% 30ml/kg</li>
+        <li>ATB em até 1h</li>
+        <li>Coletar lactato e culturas</li>
+      </ul>
+    </div>
+    <button onclick="toggleProtocolo('hipertermia')">🧊 Hipertermia</button>
+    <div id="hipertermia" style="display:none">
+      <ul>
+        <li>Banho morno + antitérmico VO/EV</li>
+        <li>Monitorar sinais vitais</li>
+      </ul>
+    </div>
+  </div>
+  <a href="index.html" class="btn">Voltar</a>
+</body>
+</html>
